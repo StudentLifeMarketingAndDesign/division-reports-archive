@@ -1,0 +1,82 @@
+/* ---------------------------------------------------------------
+Base styles
+--------------------------------------------------------------- */
+// #BetterNavigator {display: none;}
+body, html {
+	height: 100%;
+}
+
+html.modal{
+	height: auto;
+}
+
+html {
+	font-size: 17px;
+	line-height: 1.5;
+
+	@media screen and (min-width: $break-small) {
+		font-size: 19px;
+		line-height: 1.6;
+	}
+}
+
+body {
+	background: #fff;
+	color: #333;
+	font-family: $body-font;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------------------
+Layout
+--------------------------------------------------------------- */
+// .container {
+// 	max-width: $break-xlarge;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// 	padding-left: 1em;
+// 	padding-right: 1em;
+// 	position: relative;
+// 	@media (min-width: $break-large) {
+// 		padding-left: 2em;
+// 		padding-right: 2em;
+// 	}
+// }
+.container-fluid {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: auto;
+	margin-left: auto;
+
+	@media (min-width: $break-large) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.border-container {
+	// border: 2px solid $yellow;
+	@media screen and (min-width: $break-small) {
+		border: 5px solid $yellow;
+
+		// margin-right: -15px;
+	}
+
+	@media screen and (min-width: $break-medium) {
+		border: 10px solid $yellow;
+	}
+}
+
+.summary {
+	font-size: 17px;
+	font-style: italic;
+	color: #777;
+
+	&--dark-bg {
+		color: #ddd;
+	}
+}

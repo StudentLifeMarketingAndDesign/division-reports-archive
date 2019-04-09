@@ -1,0 +1,10 @@
+.percentageblock {
+	text-align: center;
+	&__legend {
+		padding-top: 10px;
+		font-size: 12px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}

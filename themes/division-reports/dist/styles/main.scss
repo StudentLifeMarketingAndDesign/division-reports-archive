@@ -1,0 +1,78 @@
+/* Settings
+-------------------------------------------*/
+@import "settings/settings";
+
+/* Base Settings
+-------------------------------------------*/
+@import "base/normalize";
+@import "base/typography";
+@import "base/global";
+
+/* Element Imports
+-------------------------------------------*/
+@import "components/grid-bootstrap-v4";
+@import "components/form-bootstrap";
+@import "components/button-bootstrap";
+@import "components/tables";
+@import "components/skip-link";
+
+/* Division Bar
+-------------------------------------------*/
+@import "../../../../uiowa-bar/scss/uiowa-bar";
+
+/* Plugins
+-------------------------------------------*/
+//@import "plugins/shifter";
+@import "plugins/navigation";
+@import "plugins/flickity";
+@import "plugins/magnific-popup";
+
+/* Blocks
+-------------------------------------------*/
+@import "components/content-blocks/video";
+@import "components/content-blocks/percentage-block";
+@import "components/content-blocks/graph";
+@import "components/content-blocks/keystatistics.scss";
+
+/* Layout
+-------------------------------------------*/
+// @import "components/childpages";
+
+// @import "site/photogallery";
+// @import "components/calendar";
+// @import "components/news";
+// @import "components/staff";
+
+// @import "site/relatednews";
+// @import "components/initiatives";
+@import "components/searchresults";
+
+// @import "components/homepage";
+
+// @import "components/footer";
+// @import "components/sidenav";
+// @import "components/mainnav";
+@import "components/nav";
+@import "components/story-cards";
+@import "components/story-filter";
+@import "components/story-tile";
+@import "components/info-slideshow";
+@import "components/info-slide";
+@import "components/report-archive";
+// @import "components/mobilenav";
+// @import "components/breadcrumbs";
+@import "components/pagination";
+@import "components/relatedstories";
+
+
+
+/* Site specific styles
+-------------------------------------------*/
+@import "layout/story";
+@import "layout/default";
+@import "layout/header";
+@import "layout/footer";
+
+/* Print
+-------------------------------------------*/
+@import "base/print";

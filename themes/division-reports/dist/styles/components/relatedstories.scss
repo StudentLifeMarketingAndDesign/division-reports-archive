@@ -1,0 +1,178 @@
+.relatedstories {
+	margin-top: 4em;
+	padding-bottom: 4em;
+	background-color: #f9f8f5;
+}
+.tilter-container {
+	position: relative;
+	border-top: 1px solid #ddd;
+	padding-top: 3em;
+}
+.relatedstories__heading {
+	border-top: 2px solid #333;
+	border-bottom: 1px solid #ddd;
+	padding: .5em 0;
+	margin: 0;
+}
+.relatedstories__viewall {
+	color: #333;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 5px;
+	text-decoration: underline;
+	@media (min-width: $break-medium) {
+		float: right;
+		line-height: 42px;
+		margin-top: 0;
+	}
+}
+.be {
+	display: block;
+	position: absolute;
+	box-shadow: inset 0 0 0 2px $yellow;
+	pointer-events: none;
+	width: 92%;
+	height: 92%;
+	top: 4%;
+	left: 4%;
+}
+.tilter {
+	display: block;
+	position: relative;
+	margin-bottom: 2em;
+	height: auto;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	@media(min-width: $break-large) {
+		margin-bottom: 0;
+	}
+}
+.tilter * {
+	pointer-events: none;
+}
+.tilter:hover,
+.tilter:focus {
+	outline: none;
+}
+.tilter:focus .tilter__title {
+	text-decoration: underline;
+}
+.tilter--scale {
+	transition: all .4s ease-in;
+	&:hover, &:focus {
+		transform: scale(1.02);
+	}
+	&:active {
+		transition: all .01s ease;
+		transform: scale(1);
+	}
+}
+
+/*
+.tilter__figure,
+.tilter__deco,
+.tilter__caption {
+	will-change: transform;
+}*/
+
+.tilter__figure,
+.tilter__image {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.tilter__figure > * {
+	transform: translateZ(0px); /* Force correct stacking order */
+}
+
+.tilter__figure,
+.tilter__deco--overlay,
+.tilter__deco--lines,
+.tilter__deco--shine div,
+.tilter__caption {
+	transition: transform 0.4s ease-out;
+}
+
+.tilter__figure {
+	position: relative;
+}
+
+.tilter__figure::before {
+	content: '';
+	position: absolute;
+	width: 92%;
+	height: 92%;
+	top: 4%;
+	left: 4%;
+	box-shadow: 0 30px 20px rgba(35,32,39,0.5);
+}
+
+.tilter__deco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.tilter__image-container {
+	position: relative;
+	max-height: 365px;
+	overflow: hidden;
+	@media (min-width: $break-large) and (max-width: $break-xlarge) {
+		max-height: 285px;
+	}
+}
+.tilter__deco--shine div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+}
+.tilter__caption {
+	padding: 4% 8% 8%;
+}
+.tilter__title {
+	margin: 0;
+}
+.story-card-medium__summary {
+	color: #777;
+	font-style: italic;
+	font-size: 16px;
+	& p {
+		margin: 10px 0 0;
+	}
+}
+
+/* Individual styles */
+
+/* Example 1 (Default) */
+.tilter .tilter__figure::before {
+	box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+	transition: all .3s ease-in-out;
+}
+.tilter:hover .tilter__figure::before {
+	box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+
+.tilter-container .col-lg-6:first-of-type {
+	@media (min-width: $break-large) {
+		border-right: 1px solid #ddd;
+		& .tilter {
+			margin-right: 15px;
+		}
+	}
+}
+.tilter-container .col-lg-6:nth-child(2) {
+	@media (min-width: $break-large) {
+		& .tilter {
+			margin-left: 15px;
+		}
+	}
+}

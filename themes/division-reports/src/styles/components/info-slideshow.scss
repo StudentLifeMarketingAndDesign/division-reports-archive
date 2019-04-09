@@ -1,0 +1,116 @@
+.infoslide {
+	background-color: #555;
+	padding: 4em 0;
+	position: relative;
+	background-size: cover;
+	width: 100%;
+	&__body {
+		position: relative;
+		z-index: 10;
+	}
+	&__title {
+		color: #fff;
+		margin-top: 0;
+		text-align: center;
+	}
+	&__btnwrap {
+		text-align: center;
+	}
+	&__btn {
+		background-color: transparent;
+		color: #fff;
+		display: inline-block;
+		border: 2px solid $yellow;
+		font-size: 13px;
+		letter-spacing: 2px;
+		padding: 11px 12px 9px;
+		margin-top: 40px;
+		text-transform: uppercase;
+		font-family: $heading-font;
+		transition: all 0.3s ease-in;
+		&:hover, &:focus {
+			background-color: $yellow;
+			color: #000;
+		}
+	}
+	&:before {
+		content: '';
+		background-color: rgba(0,0,0,.60);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
+	@media (min-width: $break-large) {
+		height: 840px;
+	}
+}
+
+.fullwidth-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	min-height: 120%;
+	min-width: 100%;
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	min-width: 100%;
+	height: auto;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.fullwidth-video video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	min-height: 120%;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-overflow-scrolling: touch;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	opacity: 1;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	min-width: 100%;
+	height: auto;
+	min-height: 100%;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background-size: cover;
+}
+

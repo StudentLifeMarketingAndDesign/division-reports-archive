@@ -1,0 +1,99 @@
+.info-slide{}
+
+.info-slide__body{
+	color: #fff;
+}
+
+.info-slide__heading{
+	font-family: $body-font;
+	font-size: 19px;
+	color: #eee;
+	font-weight: normal;
+}
+
+$border-color: rgba(255,255,255, 0.4);
+.info-slide__section{
+	border-color: rgba(255,255,255, 0.4);
+
+	&--with-padding{
+		padding: 4%;
+	}
+
+	&--padding-right{
+		padding-right: 5%;
+	}
+	&--padding-left{
+		padding-left: 5%;
+	}
+	&--margin-bottom{
+		margin-bottom: 5%;
+	}
+	&--border-right{
+		@media (min-width: $break-medium) {
+			border-right: 1px solid $border-color;
+		}
+
+	}
+	&--border-bottom{
+		border-bottom: 1px solid $border-color;
+	}
+	&--border-left{
+		@media (min-width: $break-medium) {
+			border-left: 1px solid $border-color;
+		}
+	}
+	&--border-top{
+		border-top: 1px solid $border-color;
+	}
+
+}
+
+.stat__num{
+	color: $yellow;
+	font-size: 80px;
+	font-family: $heading-font;
+	display: inline-block;
+	font-weight: 900;
+	line-height: 1.1;
+	//Needs a fixed width so the flipping/animating/counting numbers don't change the element's width:
+	width: 260px;
+}
+
+.stat__label{
+	font-family: $heading-font;
+	color: #fff;
+	font-size: 31px;
+}
+
+.stat__caption{
+	color: #eee;
+}
+.circle {
+	text-align: center;
+}
+.circles-text {
+	font-family: $heading-font;
+	position: absolute;
+	font-size: 65px !important;
+	top: 50% !important;
+	line-height: 1 !important;
+	margin-top: -30px;
+	text-shadow: 1px 1px rgba(0,0,0,.3);
+	& sup {
+		font-size: 60%;
+	}
+}
+.circles-wrp {
+	height: 0;
+	padding-top: 80%;
+	position: relative;
+	display: block !important;
+}
+
+.circles-wrp svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
